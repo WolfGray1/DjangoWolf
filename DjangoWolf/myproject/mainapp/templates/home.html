@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тематический новостной сайт</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="dark-theme.js"></script>
+</head>
+<body>
+    <!-- Заголовок -->
+    <header>
+        <h1>Тематический новостной сайт</h1>
+        <p>Новости, аналитика и статьи</p>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной макет -->
+    <div class="main-layout">
+        <!-- Основной контент -->
+        <div class="content">
+            <h2>Последние новости</h2>
+            <div class="featured-news">
+                <div class="news-content">
+                    <img src="https://avatars.mds.yandex.net/i?id=30d981e93e1ce293f52fdf4059e93149_l-5332576-images-thumbs&n=13" alt="Изображение новости">
+                    <div class="registration-form">
+                        <h2>Регистрация</h2>
+                        <form action="register.php" method="POST">
+                            <input type="text" name="username" placeholder="Введите имя пользователя" required>
+                            <input type="password" name="password" placeholder="Введите пароль" required>
+                            <button type="submit">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Пример новости -->
+            <h3>Новости</h3>
+            <p>Краткое описание актуальных новостей.</p>
+        </div>
+
+        <!-- Сайдбар -->
+        <aside class="sidebar">
+            <div class="search">
+                <h3>Поиск</h3>
+                <input type="text" placeholder="Поиск по сайту...">
+                <button>Найти</button>
+            </div>
+
+            <div class="categories">
+                <h3>Разделы</h3>
+                <ul>
+                    <li><a href="#">Политика</a></li>
+                    <li><a href="#">Экономика</a></li>
+                    <li><a href="#">Технологии</a></li>
+                    <li><a href="#">Спорт</a></li>
+                </ul>
+            </div>
+
+            <div class="social-media">
+                <h3>Соцсети</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+<a href="{% url 'book_list' %}" class="btn btn-primary">Управление книгами</a>
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2024 Все права защищены. Тематический новостной сайт.</p>
+    </footer>
+</body>
+</html>
